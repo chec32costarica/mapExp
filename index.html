@@ -193,7 +193,8 @@
                         color: "#ffffff",
                         fillColor: '#666',
                         fillOpacity: 0.05,
-                        radius: 100
+                        radius: 100,
+                        weight: 1
                     }).addTo(mymap)
                    
                     
@@ -206,13 +207,17 @@
             .then(d => d.json())
             .then(d => {
                 d.forEach(e => {
+
+                  
                     
                     var circle = L.circle([e[0], e[1]], {
                         color: 'red',
                         fillColor: '#f03',
                         fillOpacity: 0.05,
-                        radius: 500
+                        radius: 500,
+                        weight: 0.5
                     }).addTo(mymap)
+                        .bindPopup(e[2]);
                    
                     
                 })  
@@ -6415,6 +6420,37 @@ const urlKmGrande = "https://script.google.com/macros/s/AKfycbzsDH0ycWxo_a8-4ytg
                     
                 })  
             })
+
+
+//ICONO GRANDE PSV//
+
+const urlPsvGrande = "https://script.google.com/macros/s/AKfycbz6J9C_GrP75gCXoPL2Uf0m6zxMIfSDl3ZTMaMvO6g8rJfsxbmDcu86HUI0eE_IoHD4kQ/exec";
+
+        
+            fetch(urlPsvGrande)
+            .then(d => d.json())
+            .then(d => {
+                d.forEach(e => {
+
+                  
+                        L.marker([e[0],e[1]],{icon: 
+                        
+                          L.icon({
+                              iconUrl: e[2],
+                              iconSize:     [100, 200], // size of the icon
+                              iconAnchor:   [45, -70], // point of the icon which will correspond to marker's location
+                          })
+                        
+                        
+                        }).addTo(mymap)
+                   
+                    
+                })  
+            })
+
+
+
+
     </script>
 
 
