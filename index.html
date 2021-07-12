@@ -101045,15 +101045,26 @@ document.getElementById("select-psv").addEventListener('change', function(e){
 if(!navigator.geolocation){
     console.log("Your browser dont support geolocation")
 }else{
-  navigator.geolocation.getCurrentPosition(getPosition)
+  setInterval(()=>{
+    navigator.geolocation.getCurrentPosition(getPosition)
+  }, 5000)
+  
 }
 
-
+let marker, circle;
 
 function getPosition(position){
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
   let accuracy = position.coords.accuracy;
+
+  if(marker){
+    mymap.removeLayer(marker);
+  }
+
+  if(circle){
+    mymap.removeLayer(circle);
+  }
 
   let positionIcon = L.icon({
                     iconUrl: 'currentLocation_icon.svg',
@@ -101063,15 +101074,15 @@ function getPosition(position){
                     popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
                     });
 
-  let marker = L.marker([lat,long], {icon: positionIcon})
-  let circle = L.circle([lat,long,{radius: accuracy}])
+  marker = L.marker([lat,long], {icon: positionIcon})
+  circle = L.circle([lat,long,{radius: accuracy}])
 
   
 
 
   let featureGroup = L.featureGroup([marker, circle]).addTo(mymap)
 
-  mymap.fitBounds(featureGroup.getBounds())
+  //mymap.fitBounds(featureGroup.getBounds())
 }
 
     </script>
