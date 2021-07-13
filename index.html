@@ -122,7 +122,7 @@
                 d.forEach(e => {
 
                     let icon_entregado = L.icon({
-                    iconUrl: 'green-icon.svg',
+                    iconUrl: 'delivered.svg',
                 
                     iconSize:     [30, 40], // size of the icon
                     iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
@@ -130,7 +130,7 @@
                     });
 
                     let icon_pendiente = L.icon({
-                    iconUrl: 'red-icon.svg',
+                    iconUrl: 'notDelivered.svg',
                 
                     iconSize:     [30, 40], // size of the icon
                     iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
@@ -101053,7 +101053,7 @@ if(!navigator.geolocation){
 
 let marker, circle;
 
-function getPosition(position){
+function getPosition(position){ 
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
   let accuracy = position.coords.accuracy;
@@ -101082,7 +101082,7 @@ function getPosition(position){
 
   let featureGroup = L.featureGroup([marker, circle]).addTo(mymap)
 
-  //mymap.fitBounds(featureGroup.getBounds())
+  //cmymap.fitBounds(featureGroup.getBounds())
 }
 
     </script>
