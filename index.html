@@ -3,8 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -24,6 +23,9 @@
   <body>
     <div class="container-fluid d-flex justify-content-end">
         <div class="mapa" id="mapid"></div>
+        <a href="#" class="float" id="current-locarion">
+          <img src="currentLocation.svg" class="my-float">
+        </a>
         <div class="side">
             <div class="logoChec"><img src="checLogo.png"></div>
             <button class="btn btn-primary list-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">土地清单 - Listado de Propiedades</button>
@@ -155682,6 +155684,7 @@ function getPosition(position){
 
   //cmymap.fitBounds(featureGroup.getBounds())
 }
+
 
     </script>
 

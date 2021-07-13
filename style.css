@@ -1,5 +1,14 @@
 *{padding:0;margin:0;}
 
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #mymap {
+    height: 100%;
+    width: 100vw;
+}
+
 #mapid { 
     height: 100vh; width:100vw;
     z-index: 0;
@@ -41,3 +50,24 @@ h1 {
     width: 100px;
 }
 
+
+
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	left:40px;
+	background-color:rgb(10, 18, 128);
+    border: solid 2px #fff;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+    margin-top: 12px;
+}
