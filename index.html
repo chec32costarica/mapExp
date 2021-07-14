@@ -147,7 +147,7 @@
                     popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
                     });
 
-                    let exp = `<h1>征地地籍图(Plano)：<span class="catastro">${e[3]}<span/><h1/><h1>${e[2]}</h1>`
+                    let exp = `<h1>地籍图(Plano)：<span class="catastro">${e[3]}<span/><h1/><h1>${e[2]}</h1>`
 
                     if (e[2] == "交付 Entregado") {
                         L.marker([e[0],e[1]],{icon: icon_entregado}).addTo(mymap)
