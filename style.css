@@ -55,6 +55,22 @@ h1 {
 	right: 25px;
 }
 
+.listado-btn{
+    position:fixed;
+    width: 200px;
+	height:60px;
+	top:-15px;
+	left: 60px;
+}
+
+.selector-psv{
+    position:fixed;
+    width: 100px;
+	height:60px;
+	top:10px;
+	left: 275px;
+}
+
 .autor{
     position:fixed;
 	bottom:10px;
