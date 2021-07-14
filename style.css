@@ -23,7 +23,7 @@ html, body, #mymap {
     padding: 10px;
     text-align: center;
     top: 1%;
-    width: 300px;
+    width: 200px;
     z-index: 10;
     background: linear-gradient(to right,  rgba(255,255,255,1), rgba(136, 118, 118, 0), rgba(255,255,255,1));
     border-radius:5px;
@@ -69,5 +69,25 @@ h1 {
 }
 
 .my-float{
-    margin-top: 11px;
+    margin-top: -10px;
 }
+
+.kc_fab_main_btn {
+    position:fixed;
+    background-color: #F44336;
+    width: 60px;
+    height: 60px;
+    bottom:40px;
+	left:40px;
+    border-radius: 100%;
+    background: #353438;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 36px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  
