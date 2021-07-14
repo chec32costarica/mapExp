@@ -265,7 +265,20 @@
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">${e[3]}</div>
                         </div>
-                        <span class="badge bg-primary rounded-pill">${e[2]}</span>
+                        ${
+                                            (() => {
+                                                if(e[2] == "交付 Entregado") {
+                                                    return `<span class="badge bg-success rounded-pill">${e[2]}</span>`;
+
+                                                } else {
+                                                    return `<span class="badge bg-warning rounded-pill">${e[2]}</span>`;
+
+                                                }
+
+                                            })()
+
+                                        }
+                        
                     </li>
 
                     `
