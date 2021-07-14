@@ -47,7 +47,11 @@ h1 {
 }
 
 .logoChec img{
-    width: 100px;
+    position: fixed;
+    width: 70px;
+	height:60px;
+	bottom:40px;
+	right:40px;
 }
 
 
@@ -58,7 +62,7 @@ h1 {
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
+	bottom:10px;
 	left:40px;
 	background-color:rgb(10, 18, 128);
     border: solid 2px #fff;
