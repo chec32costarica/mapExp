@@ -51,12 +51,19 @@ h1 {
     position:fixed;
     width: 70px;
 	height:60px;
+	bottom:40px;
+	right: 25px;
+}
+
+.autor{
+    position:fixed;
 	bottom:10px;
 	right: 15px;
 }
 
-
-
+h5 {
+    font-size: 14px;
+}
 
 
 .float{
@@ -82,7 +89,7 @@ h1 {
     background-color: #F44336;
     width: 40px;
     height: 40px;
-    bottom:10px;
+    bottom:30px;
 	left:15px;
     border-radius: 100%;
     background: #353438;
