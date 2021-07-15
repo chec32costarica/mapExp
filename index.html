@@ -119,12 +119,16 @@
 
     <script>
         var mymap = L.map('mapid').setView([10.209445, -83.834245], 14);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	    maxZoom: 19,
-	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(mymap);
+       // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	     // maxZoom: 19,
+	     // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+       // }).addTo(mymap);
 
-      
+        L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+	      maxZoom: 19,
+        subdomains:['mt0','mt1','mt2','mt3']
+        }).addTo(mymap);
+        
 
 
         const urlExp = "https://script.google.com/macros/s/AKfycbxtUwKz593_-ZGIxGico3nJw5q4ni2yWUWaQ-ted8jiKTpSEQSKtBvUY7CsJpnhKiQt/exec";
@@ -100937,8 +100941,8 @@ let mapa_json = {
 L.geoJSON(mapa_json,{
     style: function(feature){
         return{
-            color: '#666',
-            weight: 1.2
+            color: '#fff',
+            weight: 1.5
         }
     }
 }).addTo(mymap)
@@ -155535,8 +155539,8 @@ let union = {
 L.geoJSON(union,{
     style: function(feature){
         return{
-            color: '#666',
-            weight: 1.2
+            color: '#fff',
+            weight: 1.5
         }
     }
 }).addTo(mymap)
